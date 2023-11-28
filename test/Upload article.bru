@@ -1,0 +1,156 @@
+meta {
+  name: Upload article
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/upload/article_raw_en?format=avro
+  body: json
+  auth: none
+}
+
+query {
+  format: avro
+}
+
+body:json {
+  {
+    "accuracy": "UNKNOWN",
+    "affiliation": null,
+    "anger": null,
+    "channel": null,
+    "commentsCount": null,
+    "created": 922838400,
+    "cred": null,
+    "credMan": false,
+    "disgust": null,
+    "disinfoType": "UNKNOWN",
+    "dislikesCount": null,
+    "fear": null,
+    "feedId": "D",
+    "id": "00000000-0000-0000-0000-000000131000",
+    "images": null,
+    "joy": null,
+    "language": "en",
+    "languageFlags": null,
+    "likesCount": null,
+    "metadata": {
+      "array": [
+        {
+          "data": [
+            {
+              "end": null,
+              "id": null,
+              "label": null,
+              "lemma": null,
+              "options": null,
+              "start": null,
+              "type": "commit_id",
+              "value": {
+                "string": "https://ci.tno.nl/gitlab/henry/ris_crawler/commit/90410fc9311e93693053f0d61a878c9f53d7a20c"
+              },
+              "wkt": null
+            },
+            {
+              "end": null,
+              "id": null,
+              "label": null,
+              "lemma": null,
+              "options": null,
+              "start": null,
+              "type": "source",
+              "value": {
+                "string": "{\"publisher\":\"TNO\",\"location\":\"Rijswijk\"}"
+              },
+              "wkt": null
+            },
+            {
+              "end": null,
+              "id": null,
+              "label": null,
+              "lemma": null,
+              "options": null,
+              "start": null,
+              "type": "tags",
+              "value": {
+                "string": "[\"Blast resistant structures\",\"Bulkheads\",\"Measurement\",\"Panels\",\"Pressure\",\"Ships\",\"Strains\"]"
+              },
+              "wkt": null
+            },
+            {
+              "end": null,
+              "id": null,
+              "label": null,
+              "lemma": null,
+              "options": null,
+              "start": null,
+              "type": "docId",
+              "value": {
+                "double": 131000
+              },
+              "wkt": null
+            },
+            {
+              "end": null,
+              "id": null,
+              "label": null,
+              "lemma": null,
+              "options": null,
+              "start": null,
+              "type": "authors",
+              "value": {
+                "string": "[\"Kasteele, R.M. van de\"]"
+              },
+              "wkt": null
+            },
+            {
+              "end": null,
+              "id": null,
+              "label": null,
+              "lemma": null,
+              "options": null,
+              "start": null,
+              "type": "review",
+              "value": {
+                "string": "D"
+              },
+              "wkt": null
+            }
+          ],
+          "origin": "ris_crawler"
+        }
+      ]
+    },
+    "neutral": null,
+    "original": null,
+    "originalLanguage": {
+      "string": "en"
+    },
+    "polarisation": null,
+    "pub_date": {
+      "long": 922838400
+    },
+    "readability": null,
+    "sadness": null,
+    "sarcasm": null,
+    "sharesCount": null,
+    "sourceId": "RIS",
+    "storyCount": null,
+    "storyId": null,
+    "summary": null,
+    "surprise": null,
+    "target": null,
+    "text": "",
+    "title": {
+      "string": "Research on explosion-resistant ship pannels - measurement results of the fourth blast bunker test series (April 1998)"
+    },
+    "type": {
+      "string": "report"
+    },
+    "updated": 1701115862,
+    "url": "",
+    "version": 1,
+    "viewsCount": null
+  }
+}

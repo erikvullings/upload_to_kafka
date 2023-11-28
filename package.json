@@ -1,0 +1,45 @@
+{
+  "name": "upload_to_kafka",
+  "version": "1.0.0",
+  "description": "A simple service to upload JSON objects to Kafka",
+  "main": "src/index.mts",
+  "typings": "src/index.mts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/index.mts ",
+    "debug": "bun --watch --inspect src/index.mts ",
+    "start": "bun src/index.mts",
+    "docker": "npm run docker:build && npm run docker:tag && npm run docker:publish && npm run docker:tag:latest && npm run docker:publish:latest",
+    "docker:build": "docker buildx build -t kafka_upload_svc .",
+    "docker:tag": "docker tag kafka_upload_svc driverqeu/kafka_upload_svc:3.0.9",
+    "docker:tag:latest": "docker tag kafka_upload_svc drivereu/kafka_upload_svc:latest",
+    "docker:publish": "docker push drivereu/kafka_upload_svc:3.0.9",
+    "docker:publish:latest": "docker push drivereu/kafka_upload_svc:latest",
+    "docker:sh": "docker run -it kafka_upload_svc sh",
+    "docker:run": "docker run -it kafka_upload_svc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikvullings/upload_to_kafka.git"
+  },
+  "keywords": [
+    "kafka",
+    "kafkajs",
+    "REST"
+  ],
+  "author": "Erik Vullings <erik.vullings@gmail.com> (http://www.tno.nl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erikvullings/upload_to_kafka/issues"
+  },
+  "homepage": "https://github.com/erikvullings/upload_to_kafka#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "node-test-bed-adapter": "3.0.17"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "bun-types": "^1.0.14",
+    "typescript": "5.3.2"
+  }
+}

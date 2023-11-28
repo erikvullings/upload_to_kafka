@@ -1,0 +1,41 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Document Upload API"
+  },
+  "paths": {
+    "/upload/{topic}": {
+      "post": {
+        "summary": "Upload a document",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "topic",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "The topic of the document"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "The document to upload"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Document received"
+          }
+        }
+      }
+    }
+  }
+}
